@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content= "Orinoco est un site de commerce en ligne, vendant tout type de produits">
+    
+    <link rel= "stylesheet" href= "../assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.css">
+    <link href="../fontawesome/css/all.css" rel="stylesheet">
+    
+    <title>Orinoco - Panier</title>
+    
+</head>
+<body>
+    <main class="container">
+
+        <!-- Début du titre -->
+        <header class="row">
+            <img class= "col-xl-3 col-lg-3 col-md-4 logo" src= "../assets/icon/orinoco_s.png" alt= "Orinoco">
+            <a class= "col-xl-2 col-lg-3 col-md-3" href= "../index.html"><h1>Accueil</h1></a>
+            <a class="col-xl-2 col-lg-3 col-md-3" href= "cart.html">Panier</a>
+        </header>
+        <!---------------- Fin du titre ---------------------->
+        
+        <div class="row">
+            <div class="container">
+            <h1 class="text-center">Votre panier</h1>
+        <!----------------Début tableau --------------- -->
+                <div id="tableauCart" class="card border-dark">
+                    <table class="table bg-light">
+                        <thead class="thead-light">
+                            <tr>
+                                <th>Produit</th>
+                                <th>Couleur</th>
+                                <th>Quantité</th>
+                                <th>Prix</th>
+                                <th>Prix total</th>
+                            </tr>
+                        </thead>
+                        <tbody id="allCartProducts">
+
+                        </tbody>
+        </table>
+    </div>
+    <!-- ---------Fin du Tableau------------------------- -->
+    
+    <!-- Total Panier -->
+    <h2 id="affichageTotal">Total Panier</h2>
+    <button id="emptyButton" class="emptyButton btn-secondary">Vider le panier</button>
+    
+        </div>
+
+     <!-- ----------Début du Formulaire---------- -->
+     
+     <div class="row">
+        <form class="form" action= "order.html">
+           
+            <div class="for-row my-3">
+                <label for="lastName">Nom</label>
+                <div>
+                    <input type="text" class="form-control" id="lastName" placeholder="Dupont"/>
+                </div>
+            </div>
+
+            <div class="for-row my-3">
+                <label for="firstName">Prénom</label>
+                <div>
+                    <input type="text" class="form-control" id="firstName" placeholder="Martin"/>
+                </div>
+            </div>
+
+            <div class="for-row my-3">
+                <label for="phoneNumber">N° de Téléphone</label>
+                <div>
+                    <input type="tel" required placeholder= "0600000000" class="form-control" id="phoneNumber"/>
+                </div>
+            </div>
+
+            <div class="for-row my-3">
+                <label for="Address">Adresse</label>
+                <div>
+                    <input type="text" class="form-control" id="address" placeholder="1 rue du 8 mai 1945"/>
+                </div>
+            </div>
+
+            <div class="for-row my-3">
+                <label for="inputCity">Ville</label>
+                <div>
+                    <input type="text" class="form-control" id="inputCity" placeholder="Paris"/>
+                </div>
+            </div>
+
+            <div class="for-row my-3">
+                <label for="inputEmail">eMail</label>
+                <div>
+                    <input type="email" class="form-control" id="inputEmail" placeholder="Nom@exemple.com"/>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <a href="#" id="submitProfil" class= "btn btn-primary">
+                    Confirmer mes coordonnées
+                </a>
+            </div>
+
+        </form>
+        <div class="text-center">
+            <button id="orderButton" class="btn order-button btn-outline-primary disabled"> 
+                <a href= "confirmation.html">
+                Valider ma commande
+                </a>
+            </button>
+        </div>
+
+     </div>
+     <!-- ----------Fin du Formulaire---------------- -->
+
+        <!-- Début du footer -->
+        <div class="row footer">
+            <div class="col-sm-12">
+                <p class="text-center white">
+                   Orinoco - Contact<br>
+                </p>
+                <div class="row row-no-gutters social">
+                    <div class="col-sm-3">
+                        <div class="text-center">
+                            <a class="social" href="#"><i class="fab fa-twitter icon-md"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="text-center">
+                            <a class="social" href="#"><i class="fab fa-facebook-f icon-md"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+    
+                        <div class="text-center">
+                            <a class="social" href="mailto:contact@orinoco.fr"><i class="fab far fa-envelope icon-md"></i></a>
+                        </div>
+    
+                    </div>
+                    <div class="col-sm-3">
+    
+                        <div class="text-center">
+                            <a class="social" href="#"><i class="fab fas fa-phone"></i></a>
+                        </div>
+    
+                    </div>
+    
+                    
+    
+            </div>
+        </div>
+    </div>
+    <!-- fin du footer -->
+
+    </main>
+    
+    <script src="../assets/js/cart.js" charset="utf-8"></script>
+
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel= "stylesheet" href= "../assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.css">
+    <link href="../fontawesome/css/all.css" rel="stylesheet">
+
+    <title>Orinoco - Commander</title>
+</head>
+<body>
+    <div class="container">
+        <!------------------- Début du titre ------------------>
+        <header class="row">
+            <img class= "col-xl-3 col-lg-3 col-md-4 logo" src= "../assets/icon/orinoco_s.png" alt= "Orinoco">
+            <a class= "col-xl-2 col-lg-3 col-md-3" href= "../index.html"><h1>Accueil</h1></a>
+            <a class="col-xl-2 col-lg-3 col-md-3" href= "cart.html">Panier</a>
+        </header>
+        <!------------------- Fin du titre ----------------------->
+
+        <main class="container">
+            <div class="row align-items-center">
+              <div class="col jumbotron">
+                <h1 class="display-4 mt-5 mb-2">
+                  Merci
+                  <strong>
+                    <span id="lastName"></span>
+                  </strong>
+                  de votre confiance!
+                </h1>
+                <p class="lead mb-5">
+                  Vous recevrez votre facture de
+                  <strong> <span id="prixTotal"></span>€</strong>
+                  et les details de livraison dans votre boîte mail ou à l'adresse que
+                  vous avez indiquée.
+                </p>
+                <p class="pb-5">
+                  Votre commande avec ID:
+                  <strong>
+                    <span id="orderID"></span>
+                  </strong>
+                  est déjà en route pour l'expedition.<br />
+                </p>
+              </div>
+            </div>
+          </main>
+
+      
+
+
+
+        <!---------------- Début du footer -------------------->
+        <div class="row footer">
+            <div class="col-sm-12">
+                <p class="text-center white">
+                   Orinoco - Contact<br>
+                </p>
+                <div class="row row-no-gutters social">
+                    <div class="col-sm-3">
+                        <div class="text-center">
+                            <a class="social" href="#"><i class="fab fa-twitter icon-md"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="text-center">
+                            <a class="social" href="#"><i class="fab fa-facebook-f icon-md"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+    
+                        <div class="text-center">
+                            <a class="social" href="mailto:contact@orinoco.fr"><i class="fab far fa-envelope icon-md"></i></a>
+                        </div>
+    
+                    </div>
+                    <div class="col-sm-3">
+    
+                        <div class="text-center">
+                            <a class="social" href="#"><i class="fab fas fa-phone"></i></a>
+                        </div>
+    
+                    </div>
+    
+                    
+    
+            </div>
+        </div>
+    </div>
+        <!---------------- FIn du footer ------------------>
+
+    </div>
+    <script src="../assets/js/order.js"></script>
+</body>
+</html>
