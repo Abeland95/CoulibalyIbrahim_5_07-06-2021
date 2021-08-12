@@ -60,7 +60,7 @@ fetch(url)
                             container.className = "col-12 d-flex flex-row flex-wrap justify-content-center lg-flex-row sm-flex-column "
                             div.className = "m-3 card col-xl-3 col-lg-12 col-md-12 col-sm-12"
                             img.className = "card-img-top p-3 img-fluid w-100"
-                            a.className = "m-3 btn btn-secondary background-color:blue w-80 border mx-auto"
+                            a.className = "m-3 btn btn-secondary w-80 border mx-auto"
                             h3.className = "mx-3"
                             h4.className = "mx-3"
                             p.className = "mx-3"
