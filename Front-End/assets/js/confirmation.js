@@ -2,7 +2,7 @@
 
 let affichagePrixTotal = document.getElementById("#span_price")
 let affichageID = document.querySelector(".name span")
-let orderInfo = JSON.parse(localStorage.getItem("orderInfos"))
+let orderInfo = localStorage.getItem("orderInfos")
 let prixTotal = JSON.parse(localStorage.getItem("prixTotal"))
 let orderID = orderInfo.orderID;
 let affichageName = document.querySelector(".name span")
@@ -21,7 +21,7 @@ let affichagefullDate = document.querySelector(".Date span")
 // Affichage des données de la commande-----------
 affichagePrixTotal.textContent = prixTotal
 affichageID.textContent = orderID
-affichageName.textContent = `${nameInfo.contact.firstName} ${nameInfo.contact.lastName}`
+affichageName.textContent = `${nameGet.contact.firstName} ${a.contact.lastName}`
 affichagefullDate.textContent = fullDate
 
 //Remise à 0 du panier

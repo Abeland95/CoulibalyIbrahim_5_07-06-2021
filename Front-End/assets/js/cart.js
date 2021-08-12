@@ -140,7 +140,7 @@ function formulaire() {
     } else {
         alert("Vous pouvez valider votre commande");
         validationButton.classList.remove("disabled")
-        Infosend()
+        
         
         
     }
@@ -151,6 +151,11 @@ function formulaire() {
 submitProfil.addEventListener("click", function(event) {
     event.preventDefault();
     formulaire();
+})
+
+validationButton.addEventListener("click", function(event) {
+    event.preventDefault();
+    Infosend();
 })
 
 // Fonction envoi de la commande au serveur----------------
@@ -165,7 +170,7 @@ function Infosend() {
         city.value,
         eMail.value    
         );
-    fetch("http://localhost:3000/api/teddies", {
+    fetch("http://localhost:3000/api/teddies/order", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -174,23 +179,26 @@ function Infosend() {
         contact: {
             lastName: newClient.lastName,
             firstName: newClient.firstName,
-            phoneNumber: newClient.phoneNumber,
             address: newClient.address,
+            city: newClient.city,
             email: newClient.eMail
-        },
 
+        },
+        products: Idlist,
         }),
-        item: Idlist,
+        
     })
     .then((response) => {
         if(response.ok) {
+            console.log(response);
             return response.json();
         }
     })
     .then((data) => {
         localStorage.setItem("orderInfos", JSON.stringify(data))
-        
+        window.location = './confirmation.html';
 
     })
+
     .catch((error) => console.log("erreur de type : ", error))
 }
